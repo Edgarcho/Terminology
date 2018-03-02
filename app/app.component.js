@@ -15,7 +15,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'app-root',
-        template: "\n  <h1>My First Angular 2 App</h1>\n  "
+        template: "\n    <nav class=\"navbar navbar-expand-md navbar-dark bg-dark fixed-top\">\n      <a class=\"navbar-brand\" href=\"#\">Terminology</a>\n      <div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\">\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item active\">\n            <a class=\"nav-link\" href=\"https://www.codecademy.com/articles/glossary-html\">HTML Glossary</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"https://www.codecademy.com/articles/glossary-css\">CSS Glossary</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"http://www.oracle.com/technetwork/java/glossary-135216.html\">Java Glossary</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" href=\"https://developer.mozilla.org/en-US/docs/Web/JavaScript\">JavaScript Resource</a>\n          </li>\n        </ul>\n      </div>\n    </nav>\n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
