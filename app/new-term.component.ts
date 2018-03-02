@@ -9,22 +9,21 @@ import { Term } from './term.model';
   <form id="newTermForm">
     <div class="form-group">
       <div class="col-md-4">
-        <input type="text" class="form-control" placeholder="Term" #newTerm>
+        <input class="form-control" placeholder="Term" #newTerm>
       </div>
       <div class="col-md-4">
-        <input type="text" class="form-control" placeholder="Definition" #newDefinition>
+        <input class="form-control" placeholder="Definition" #newDefinition>
       </div>
     </div>
     <div class="col-sm-4">
      <select #newLanguage class="custom-select custom-select-lg mb-3">
-      <option selected>Choose category</option>
-      <option [value]="HTML">HTML</option>
-      <option [value]="CSS">CSS</option>
-      <option [value]="Java">Java</option>
-      <option [value]="JavaScript">JavaScript</option>
+      <option value="HTML"> HTML</option>
+      <option value="CSS"> CSS</option>
+      <option value="Java"> Java</option>
+      <option value="JavaScript"> JavaScript</option>
      </select>
     </div>
-    <button class="btn btn-outline-primary" id =newTermButton (click)="submitForm(newTerm.value, newDefinition.value, newLanguage.value); newTerm.value=''; newDefinition.value=''; newLanguage.value='';">Submit</button>
+    <button class="btn btn-outline-primary" (click)="submitForm(newTerm.value, newDefinition.value, newLanguage.value); newTerm.value=''; newDefinition.value='';">Submit</button>
   </form>
   `
 })
