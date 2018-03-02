@@ -4,7 +4,7 @@ import { Term } from './term.model';
 @Component({
   selector: 'term-list',
   template: `
-  <ul*ngFor = 'let currentTerm of childTermList'>
+  <ul *ngFor = 'let currentTerm of childTermList'>
   <li>{{currentTerm.term}}</li>
   <li>{{currentTerm.definition}}</li>
   <li>{{currentTerm.language}}</li>

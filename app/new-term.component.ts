@@ -5,15 +5,15 @@ import { Term } from './term.model';
   selector: 'new-term',
   template: `
   <form id="newTermForm">
-    <div class="form-row">
-      <div class="col">
+    <div class="form-group">
+      <div class="col-md-4">
         <input type="text" class="form-control" placeholder="Term" #newTerm>
       </div>
-      <div class="col">
+      <div class="col-md-4">
         <input type="text" class="form-control" placeholder="Definition" #newDefinition>
       </div>
     </div>
-    <div class="form-group col-md-4">
+    <div class="col-sm-4">
      <label for="inputState">Language</label>
      <select #newLanguage class="form-control">
        <option [value]="HTML">HTML</option>
