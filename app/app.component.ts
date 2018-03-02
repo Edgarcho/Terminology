@@ -24,6 +24,8 @@ import { Term } from './term.model';
       </div>
     </nav>
     <new-term (newTermSender) = "addTerm($event)"></new-term>
+    <div class="container">
+    </div>
   `
 })
 
