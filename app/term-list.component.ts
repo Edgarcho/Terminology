@@ -10,7 +10,7 @@ import { Term } from './term.model';
         <h5 class="card-title">{{currentTerm.term}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{currentTerm.language}}</h6>
         <p class="card-text">{{currentTerm.definition}}</p>
-        <a href="#" class="card-link">Card link</a>
+        <button (click)='editTermButton(currentTerm)'>Edit</button>
         <a href="#" class="card-link">Another link</a>
       </div>
     </div>
@@ -22,5 +22,8 @@ export class TermListComponent {
   @Input() childTermList: Term [];
   @Output() clickSender = new EventEmitter();
 
+  editTermButton(termToEdit: Term){
+    this.clickSender.emit(termToEdit);
+  }
 
 }
