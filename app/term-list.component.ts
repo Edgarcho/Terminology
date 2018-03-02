@@ -4,11 +4,17 @@ import { Term } from './term.model';
 @Component({
   selector: 'term-list',
   template: `
-  <ul *ngFor = 'let currentTerm of childTermList'>
-  <li>{{currentTerm.term}}</li>
-  <li>{{currentTerm.definition}}</li>
-  <li>{{currentTerm.language}}</li>
-  </ul>
+  <div class ="card-columns">
+    <div class="card" *ngFor = 'let currentTerm of childTermList'>
+      <div class="card-body">
+        <h5 class="card-title">{{currentTerm.term}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{currentTerm.language}}</h6>
+        <p class="card-text">{{currentTerm.definition}}</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
+    </div>
+  </div>
   `
 })
 
