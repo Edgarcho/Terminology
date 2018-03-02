@@ -23,13 +23,15 @@ import { Term } from './term.model';
         </ul>
       </div>
     </nav>
-    <new-term (newTermSender) = "addTerm($event)"></new-term>
     <div class="container">
+    <new-term (newTermSender) = "addTerm($event)"></new-term>
+    <term-list [childTermList]="masterTermList"</term-list>
     </div>
   `
 })
 
 export class AppComponent {
+  masterTermList: Term[] =[];
 
   addTerm(newTermFromChild: Term){
     this.masterTermList.push(newTermFromChild);
