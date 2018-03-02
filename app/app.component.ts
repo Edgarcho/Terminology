@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Term } from './term.model';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,14 @@ import { Component } from '@angular/core';
         </ul>
       </div>
     </nav>
+    <new-term (newTermSender) = "addTerm($event)"></new-term>
   `
 })
 
 export class AppComponent {
+
+  addTerm(newTermFromChild: Term){
+    this.masterTermList.push(newTermFromChild);
+  }
 
 }
