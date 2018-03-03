@@ -25,11 +25,15 @@ import { Term } from './term.model';
       </div>
     </nav>
   </header>
+  <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <new-term (newTermSender)='addTerm($event)'></new-term>
-      <edit-term [childSelectedTerm]="selectedTerm" (doneButtonClickSender)="finishedEditing()"></edit-term>
-      <term-list [childTermList]="masterTermList" clickSender='editTerm($event)'></term-list>
+      <h1 class="display-1">Terminology</h1>
+      <p class="lead">"Live as if you were to die tomorrow. Learn as if you were to live forever" - Mahatma Gandhi</p>
     </div>
+  </div>
+      <new-term (newTermSender)='addTerm($event)'></new-term>
+      <term-list [childTermList]="masterTermList" (clickSender)='editTerm($event)'></term-list>
+      <edit-term [childSelectedTerm]="selectedTerm" (doneButtonClickSender)="finishedEditing()"></edit-term>
   `
 })
 
@@ -43,9 +47,9 @@ export class AppComponent {
   ];
 
   editTerm(clickedTerm){
-    debugger;
     this.selectedTerm = clickedTerm;
   }
+
   finishedEditing(){
     this.selectedTerm = null;
   }

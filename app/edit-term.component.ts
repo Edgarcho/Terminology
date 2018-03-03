@@ -5,15 +5,25 @@ import { Term } from './Term.model';
   selector: 'edit-term',
   template: `
   <h3>Edit</h3>
-  <div *ngIf='childSelectedTerm'>
-      <h3>Edit Animal Record</h3>
-      <label for='name'>Name:</label>
-      <input [(ngModel)]='childSelectedTerm.term'>
-      <br>
-      <label for='caretakers'>Caretakers:</label>
-      <input [(ngModel)]='childSelectedTerm.definition'>
-      <button class='btn btn info' (click)='doneButtonClicked()'>Done</button>
-  </div>
+<div *ngIf='childSelectedTerm'>
+    <div class="form-group">
+      <div class="col-md-4">
+          <input [(ngModel)]='childSelectedTerm.term'>
+      </div>
+      <div class="col-md-4">
+        <input [(ngModel)]='childSelectedTerm.definition'>
+      </div>
+    </div>
+    <div class="col-sm-4">
+     <select  class="custom-select custom-select-lg mb-3" [(ngModel)]='childSelectedTerm.language'>
+      <option value="HTML"> HTML</option>
+      <option value="CSS"> CSS</option>
+      <option value="Java"> Java</option>
+      <option value="JavaScript"> JavaScript</option>
+     </select>
+    </div>
+    <button class='btn btn info' (click)='doneButtonClicked()'>Done</button>
+</div>
   `
 })
 
