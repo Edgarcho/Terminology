@@ -32,8 +32,8 @@ import { Term } from './term.model';
     </div>
   </div>
       <new-term (newTermSender)='addTerm($event)'></new-term>
-      <term-list [childTermList]="masterTermList" (clickSender)='editTerm($event)'></term-list>
       <edit-term [childSelectedTerm]="selectedTerm" (doneButtonClickSender)="finishedEditing()"></edit-term>
+      <div id="lists"><term-list [childTermList]="masterTermList" (clickSender)='editTerm($event)'></term-list></div>
   `
 })
 
